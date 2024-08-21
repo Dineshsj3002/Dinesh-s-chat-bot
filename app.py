@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 st.title("Welcome to Dinesh's Chat")
 
-api_key = "AIzaSyD4-b8tfomAj72fxTEGBA9uizXFufmzqSQ"
+api_key = "AIzaSyD4-b8tfOmAj72fxTEGBA9uizXFufmzqSQ"
 
 genai.configure(api_key=api_key)
 
