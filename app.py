@@ -3,19 +3,14 @@ import google.generativeai as genai
 
 st.title("Welcome to Dinesh's Chat")
 
-api_key = "AIzaSyD4-b8tfOmAj72fxTEGBA9uizXFufmzqSQ" 
-genai.configure(api_key=api_key)
+genai.configure(api_key = "AIzaSyD4-b8tfOmAj72fxTEGBA9uizXFufmzqSQ")
+
+text = st.text_input("enter your question")
 
 model = genai.GenerativeModel('gemini-pro')
 chat = model.start_chat(history=[])
 
-text = st.text_input("Enter your question")
+response = chat.send_message(text)
 
-if text:
-    try:
-        response = chat.send_message(text)
-        st.write(response.text)
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
-else:
-    st.info("Please enter a question to get a response.")
+if st.button("Click Me")
+st.write(response.text)
