@@ -12,5 +12,5 @@ chat = model.start_chat(history=[])
 
 response = chat.send_message(text)
 
-if st.button("Click Me")
-st.write(response.text)
+if st.button("Click Me"):
+  st.write(response.text)
